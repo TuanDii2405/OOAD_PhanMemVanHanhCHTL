@@ -4,30 +4,37 @@
 <br>Công cụ sử dụng: IntelliJ, NetBeans, MSSQL, Draw.io (vẽ ERD)
 
 ## Hướng dẫn cài đặt
-Bước 1: Khởi tạo tài khoản login trên SQL server (project dùng tài khoảng login mặc định là tk="sa" mk="12345")
-<br>Nếu đã có tài khoản như trên rồi thì có thể bỏ qua bước này
-<br>Hướng dẫn chi tiết tại https://www.youtube.com/watch?v=dJ6c3OgIVDM 
-<br> hoặc từ silde 8 - 11 https://drive.google.com/file/d/1M1YI1cSB3jthtPXM8A6fBg27VVEOSok-/view
+**Bước 1: **Thiết lập Cơ sở dữ liệu (SQL Server)
+- Khởi tạo tài khoản: Đảm bảo SQL Server của bạn đã được cấu hình tài khoản Login với thông tin:
++ User: sa
++ Password: 123
+- Khởi tạo Database:
+- Mở công cụ SQL Server Management Studio (SSMS) 2022.
+- Tìm đến đường dẫn resource/sql trong thư mục dự án.
+- Mở và thực thi (Execute) file GenerateScripts(new).sql để tự động khởi tạo cấu trúc cơ sở dữ liệu.
 
-Bước 2: Truy cập resource/sql và mở file GenerateScripts(new).sql rồi chạy Script (sử dụng MSSQL Management Studio 18) 
-<br> => database sẽ được khởi tạo
+**Bước 2:** Cấu hình Dự án (Project Structure)
+Mở dự án trên IDE và thực hiện các thiết lập trong mục Project Structure (phím tắt Ctrl + Alt + Shift + S):
 
-Bước 3: Khởi tạo dự án trong Project Structure (trong phần cài đặt của IntelliJ), trong đó ta chọn các bước thực hiện như sau:
-- Modules -> Add -> Import Modules -> Chọn file Mini-Store-Manager.iml để khởi tạo cấu hình (Nếu đã có rồi thì không cần bước này)
-- Cấu hình Compiler Output cho project (khởi tạo thư mục file out trong mục Project (nếu đã có rồi thì bỏ qua))
-- Cấu hình các đường dẫn Libraries cần thiết như: iTextPDF, POI Apache, JDBC (tất cả file thư viện đều được chứa trong thư mục lib, bao gồm POI Apache, JDBC và itextpdf-5.5)
-- Tiếp đó là cấu hình JDK cho dự án trong Project Structure
-- Kiểm tra trong Project Structure > Module xem phần src có màu xanh hay chưa, nếu chưa click chuột phải và chọn <Source>
+Import Module: Vào Modules > Add > Import Module. Chọn file Mini-Store-Manager.iml (bỏ qua nếu dự án đã nhận diện được cấu hình).
 
-Bước 4: Sau khi hoàn thành xong các bước cấu hình. Khởi chạy file EntryMain (đường dẫn: src/_Entry/EntryMain) để khởi động chương trình
+Thiết lập Output: Cấu hình đường dẫn Compiler Output trỏ về thư mục out của dự án.
 
-## Team Member
-| TenSV                 | MaSV       |
-|-----------------------|------------|
-| Trần Nguyên Lộc       | 3120410297 |
-| Võ Đăng Quang         | 3120410429 |
-| Nguyễn Văn Tấn Quân   | 3120410437 |
-| Triệu Khánh Quang     | 3120410428 |
-| Trương Tấn Đạt        | 3120410124 |
+Quản lý Thư viện (Libraries): Thêm các thư viện cần thiết trong thư mục lib. Đảm bảo đã include đầy đủ:
+
+iTextPDF (phiên bản 5.5)
+
+POI Apache (Xử lý Excel)
+
+JDBC (Kết nối SQL Server)
+
+Cấu hình SDK: Chọn phiên bản JDK phù hợp cho dự án tại mục Project.
+
+Định vị Source Code: Tại tab Modules, kiểm tra thư mục src. Nếu chưa có màu xanh, hãy chuột phải vào src và chọn Sources.
+
+**Bước 3:** Khởi chạy Chương trình
+Sau khi hoàn tất cấu hình, tìm đến file thực thi chính theo đường dẫn: src/_Entry/EntryMain.java
+
+Chuột phải vào file và chọn Run 'EntryMain' để bắt đầu sử dụng ứng dụng.
  
   

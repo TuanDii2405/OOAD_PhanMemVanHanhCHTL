@@ -1,5 +1,5 @@
-# Mini-Store-Manager
-Ứng dụng quản lí cửa hàng tiện lợi Mini Store!
+# ĐỀ TÀI
+XÂY DỰNG PHẦN MỀM Quản lý vận hành Cửa hàng tiện lợi
 <br>Công nghệ sử dụng: Java Swing, JDBC, POI Apache, iText API
 <br>Công cụ sử dụng: IntelliJ, NetBeans, MSSQL, Draw.io (vẽ ERD)
 
